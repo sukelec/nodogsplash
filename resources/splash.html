@@ -1,53 +1,34 @@
-<html>
+<!DOCTYPE html>
+<html lang="tr">
 <head>
-	<title>$gatewayname Entry</title>
-	<meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>WIFIM Social Hotspot</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<SCRIPT LANGUAGE="JavaScript">setTimeout('document.wifim.submit()',1000);</SCRIPT>
 </head>
-<body bgcolor="#DDDDDD" text="#000000">
-
-<table border="0" cellpadding="2" cellspacing="0" width="100%">
-<tr>
-	<td align="center"><h2>$gatewayname</h2></td>
-</tr>
-<tr>
-	<td align="center" height="120">
-<!--
-	A client is authenticated by requesting the page $authtarget.
-	So, href to it here, with an img or link text the user can click on.
-	Also, note that any images you reference must reside in the
-	subdirectory that is the value of $imagesdir (default: "images").
-
-	Available variables:
-	error_msg: $error_msg
-	gatewayname: $gatewayname
-	tok: $tok
-	redir: $redir
-	authaction: $authaction
-	denyaction: $denyaction
-	authtarget: $authtarget
-	clientip: $clientip
-	clientmac: $clientmac
-	gatewaymac: $gatewaymac
-	nclients: $nclients
-	maxclients: $maxclients
-	uptime: $uptime
-	imagesdir: $imagesdir
-	pagesdir: $pagesdir
-
-	Variables that can be passed back via HTTP GET.
-	Just append them to the authentication link:
-	nodoguser
-	nodogpass
-	info
-	voucher
--->
-	<a href="$authtarget">
-	<img src="$imagesdir/splash.jpg" width="71" height="49" border="0"
-		alt="Click to enter" title="Click to enter">
-	</a>
-	</td>
-</tr>
+<body bgcolor="#F6B221" topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0" marginwidth="0" marginheight="0">
+<div class="container">
+<div class="header">
+<table border="0" width="100%" cellpadding="0" bgcolor="#FFFFFF">
+<tr><td height="10"><p align="center">
+<img src="http://app.wifim.com.tr/img/splash/logo.png" width="65" height="23" border="0"></td></tr>
 </table>
-
+</div>
+<p align="center"><img border="0" src="http://app.wifim.com.tr/img/splash/gif.gif"></p>
+</div>
+<div class="footer">
+<form method='GET' name=wifim action='http://app.wifim.com.tr/rauth/229/$tok'>
+<input type='hidden' name='authaction' value='$authaction'>
+<input type='hidden' name='denyaction' value='$denyaction'>
+<input type='hidden' name='authtarget' value='$authtarget'>
+<input type='hidden' name='clientip' value='$clientip'>
+<input type='hidden' name='clientmac' value='$clientmac'>
+<input type='hidden' name='gatewaymac' value='$gatewaymac'>
+<input type='hidden' name='tok' value='$tok'>
+<input type='hidden' name='redir' value='$redir'>
+</form>
+<p align="center"><font face="Arial" color="#fff" style="font-size: 8px">&#169 Copyright 2016 WIFIM.COM.TR. All rights reserved. powered by wifim</font></p>
+</div>
 </body>
 </html>
